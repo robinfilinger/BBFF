@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('CompleteData/Historical/HistoricalStandings.csv')
+    fetch('https://github.com/robinfilinger/BBFF/blob/main/CompleteData/Historical/HistoricalStandings.csv')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
