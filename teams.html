@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blind Brook Fantasy Football League</title>
+    <title>Fantasy Football Teams</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,12 +30,42 @@
         }
         main {
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+        }
+        .team-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .team-list li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .team-list li a {
+            text-decoration: none;
+            color: #1a5f7a;
+            font-weight: bold;
+        }
+        .team-list li a:hover {
+            text-decoration: underline;
+        }
+        .owner {
+            color: #666;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Blind Brook Fantasy Football League</h1>
+        <h1>Fantasy Football League</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -46,7 +76,11 @@
         </nav>
     </header>
     <main>
-        <h2>Home</h2>
+        <h2 class="section-title">Active Teams</h2>
+        <ul id="teamList" class="team-list">
+            <!-- Teams will be populated here -->
+        </ul>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
