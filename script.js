@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('CompleteData/HistoricalStandings.csv')
+    fetch('CompleteData/Historical/HistoricalStandings.csv')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
