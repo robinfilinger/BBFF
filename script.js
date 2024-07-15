@@ -16,14 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Create headers
             const headerItem = document.createElement('li');
             headerItem.className = 'team-list-header';
-            const headerDetails = document.createElement('div');
-            headerDetails.className = 'team-details';
             Object.keys(teams[0]).forEach(key => {
-                const header = document.createElement('p');
-                header.innerHTML = `<strong>${key}</strong>`;
-                headerDetails.appendChild(header);
+                const header = document.createElement('div');
+                header.textContent = key;
+                headerItem.appendChild(header);
             });
-            headerItem.appendChild(headerDetails);
             teamList.appendChild(headerItem);
 
             // Create team items
@@ -31,16 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const listItem = document.createElement('li');
                 listItem.className = 'team-list-item';
 
-                const teamDetails = document.createElement('div');
-                teamDetails.className = 'team-details';
-
                 Object.entries(team).forEach(([key, value]) => {
-                    const detail = document.createElement('p');
-                    detail.innerHTML = `<strong>${key}:</strong> ${value || 'N/A'}`;
-                    teamDetails.appendChild(detail);
+                    const detail = document.createElement('div');
+                    detail.textContent = value || 'N/A';
+                    listItem.appendChild(detail);
                 });
 
-                listItem.appendChild(teamDetails);
                 teamList.appendChild(listItem);
             });
         })
