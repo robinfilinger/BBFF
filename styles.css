@@ -60,11 +60,12 @@ main {
 .team-list-header div {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
 }
 
-.team-list-header div span {
-    margin-right: 5px;
+.sort-icon {
+    margin-left: 5px;
 }
 
 .team-list-item {
@@ -78,10 +79,4 @@ main {
 
 .team-list-item:nth-child(even) {
     background-color: #f9f9f9;
-}
-
-.sort-icon {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
 }
