@@ -61,11 +61,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
-}
-
-.sort-icon {
-    margin-left: 5px;
 }
 
 .team-list-item {
@@ -79,4 +74,9 @@ main {
 
 .team-list-item:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+.sort-icon {
+    margin-left: 5px;
+    display: inline-block;
 }
