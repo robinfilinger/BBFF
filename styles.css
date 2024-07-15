@@ -55,10 +55,12 @@ main {
     background-color: #1a5f7a;
     color: white;
     font-weight: bold;
+    box-sizing: border-box;
+    padding: 0; /* Remove padding to ensure full-width */
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
+    gap: 0; /* No gap between header cells */
     height: 50px; /* Set a fixed height for the header */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    border: 1px solid white; /* Add border to the entire header */
-    display: flex; /* Use flexbox to align items */
 }
 
 .team-list-header div {
@@ -66,14 +68,10 @@ main {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    border: 1px solid white; /* Add border to header cells */
     height: 100%; /* Make the div fill the height of the header */
     padding: 0 10px; /* Adjust padding for better spacing */
-    flex-grow: 1; /* Ensure divs grow to fill the available space */
-    border-right: 1px solid white; /* Add right border to create cell effect */
-}
-
-.team-list-header div:last-child {
-    border-right: none; /* Remove the right border from the last header cell */
+    box-sizing: border-box;
 }
 
 .team-list-item {
