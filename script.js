@@ -27,10 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
             teams.forEach(team => {
                 const listItem = document.createElement('li');
                 listItem.className = 'team-list-item';
+                const teamDetails = document.createElement('div');
+                teamDetails.className = 'team-details';
 
                 Object.entries(team).forEach(([key, value]) => {
                     const detail = document.createElement('div');
-                    detail.textContent = value || 'N/A';
+                    const detailKey = document.createElement('span');
+                    const detailValue = document.createElement('span');
+                    detailKey.textContent = `${key}:`;
+                    detailValue.textContent = value || 'N/A';
+                    detail.appendChild(detailKey);
+                    detail.appendChild(detailValue);
                     listItem.appendChild(detail);
                 });
 
