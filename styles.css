@@ -63,6 +63,8 @@ main {
     justify-content: space-between;
     cursor: pointer;
     border: 1px solid white; /* Add border to header cells */
+    background-color: #1a5f7a; /* Make the background color consistent */
+    padding: 5px; /* Add padding to fill the box */
 }
 
 .team-list-item {
