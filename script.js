@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let teams = [];
+    let currentSortColumn = null;
+    let sortDirection = 'asc';
 
     fetch('https://raw.githubusercontent.com/robinfilinger/BBFF/main/CompleteData/Historical/HistoricalStandings.csv')
         .then(response => {
@@ -48,6 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
             header.textContent = key;
             header.addEventListener('click', () => sortByColumn(key));
             header.style.cursor = 'pointer'; // Add pointer cursor to indicate it's clickable
+
+            if (currentSortColumn === key) {
+                const sortIcon = document.createElement('span');
+                sortIcon.className = 'sort-icon';
+                sortIcon.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;'; // Up or down arrow
+                header.appendChild(sortIcon);
+            }
+
             headerItem.appendChild(header);
         });
         teamList.appendChild(headerItem);
@@ -68,6 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function sortByColumn(column) {
+        if (currentSortColumn === column) {
+            sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            currentSortColumn = column;
+            sortDirection = 'asc';
+        }
+
         const sortedTeams = [...teams].sort((a, b) => {
             const aValue = a[column] || '';
             const bValue = b[column] || '';
@@ -77,16 +94,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const bNum = parseFloat(bValue);
             
             if (!isNaN(aNum) && !isNaN(bNum)) {
-                return aNum - bNum;
+                return sortDirection === 'asc' ? aNum - bNum : bNum - aNum;
             } else {
-                return aValue.localeCompare(bValue);
+                return sortDirection === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
             }
         });
-
-        // Toggle sort direction if column is already sorted
-        if (JSON.stringify(sortedTeams) === JSON.stringify(teams)) {
-            sortedTeams.reverse();
-        }
 
         teams = sortedTeams;
         renderTable(teams);

@@ -57,6 +57,13 @@ main {
     font-weight: bold;
 }
 
+.team-list-header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
 .team-list-item {
     background-color: white;
     border: 1px solid #ddd;
@@ -68,4 +75,11 @@ main {
 
 .team-list-item:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+.sort-icon {
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
 }
