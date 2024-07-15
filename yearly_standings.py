@@ -44,7 +44,7 @@ for x in range(currentSeason-firstSeason):
         df_standings.loc[len(df_standings)] = [teamId, teamName, wins, losses, pointsFor, pointsAgainst, averagePf, averagePa]
 
         print(df_standings)
-        df_standings.to_csv('CompleteData/Historical/HistoricalStandings.csv', index=False)
+        df_standings.to_csv('CompleteData/' + str(currYear) + '/' + str(currYear) + 'Standings.csv', index=False)
 
 
 
