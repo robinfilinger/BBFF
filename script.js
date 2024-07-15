@@ -47,17 +47,18 @@ document.addEventListener('DOMContentLoaded', function() {
         headerItem.className = 'team-list-header';
         Object.keys(teams[0]).forEach(key => {
             const header = document.createElement('div');
+            const sortIcon = document.createElement('span');
+            sortIcon.className = 'sort-icon';
+
             header.textContent = key;
             header.addEventListener('click', () => sortByColumn(key));
             header.style.cursor = 'pointer'; // Add pointer cursor to indicate it's clickable
 
             if (currentSortColumn === key) {
-                const sortIcon = document.createElement('span');
-                sortIcon.className = 'sort-icon';
                 sortIcon.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;'; // Up or down arrow
-                header.appendChild(sortIcon);
             }
 
+            header.prepend(sortIcon);
             headerItem.appendChild(header);
         });
         teamList.appendChild(headerItem);

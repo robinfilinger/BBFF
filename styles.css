@@ -60,8 +60,11 @@ main {
 .team-list-header div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     cursor: pointer;
+}
+
+.team-list-header div span {
+    margin-right: 5px;
 }
 
 .team-list-item {
@@ -78,7 +81,6 @@ main {
 }
 
 .sort-icon {
-    margin-left: 5px;
     width: 10px;
     height: 10px;
     display: inline-block;
