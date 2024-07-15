@@ -16,7 +16,6 @@ for x in range(currentSeason-firstSeason):
 
     df_currYear_matchups = df_matchups.loc[df_matchups['Season'] == currYear]
     df_currYear_Teams = df_teams.loc[df_teams['Season'] == currYear]
-    
 
     def to_decimal(val):
         return Decimal(str(val)) if isinstance(val, float) else val
