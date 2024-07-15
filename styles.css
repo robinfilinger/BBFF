@@ -55,6 +55,8 @@ main {
     background-color: #1a5f7a;
     color: white;
     font-weight: bold;
+    height: 50px; /* Set a fixed height for the header */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .team-list-header div {
@@ -63,8 +65,9 @@ main {
     justify-content: space-between;
     cursor: pointer;
     border: 1px solid white; /* Add border to header cells */
-    background-color: #1a5f7a; /* Make the background color consistent */
-    padding: 5px; /* Add padding to fill the box */
+    box-sizing: border-box; /* Ensure the borders are included in the element's width and height */
+    height: 100%; /* Make the div fill the height of the header */
+    padding: 0 10px; /* Adjust padding for better spacing */
 }
 
 .team-list-item {
