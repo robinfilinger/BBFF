@@ -40,50 +40,25 @@
             list-style-type: none;
             padding: 0;
         }
-        .team-list li {
-            background-color: white;
-            margin-bottom: 10px;
+        .team-list-header {
+            background-color: #1a5f7a;
+            color: white;
             padding: 10px 20px;
             border-radius: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 10px;
         }
-        .team-list li a {
-            text-decoration: none;
-            color: #1a5f7a;
-            font-weight: bold;
-        }
-        .team-list li a:hover {
-            text-decoration: underline;
-        }
-        .owner {
-            color: #666;
-            font-style: italic;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-    
-        th, td {
+        .team-list-item {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
         }
-    
-        th {
-            background-color: #1a5f7a;
-            color: white;
-        }
-    
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-    
-        tr:hover {
-            background-color: #ddd;
+        .team-details p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -101,9 +76,9 @@
     </header>
     <main>
         <h2 class="section-title">Active Teams</h2>
-        <table id="teamTable">
-            <!-- Table will be populated here -->
-        </table>
+        <ul id="teamList" class="team-list">
+            <!-- List items will be populated here -->
+        </ul>
     </main>
     <script src="script.js"></script>
 </body>

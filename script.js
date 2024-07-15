@@ -11,25 +11,37 @@ document.addEventListener('DOMContentLoaded', function() {
             const teams = parseCSV(data);
             console.log("Parsed teams:", teams);
 
-            const table = document.getElementById('teamTable');
+            const teamList = document.getElementById('teamList');
             
-            // Create table header
-            const thead = table.createTHead();
-            const headerRow = thead.insertRow();
+            // Create headers
+            const headerItem = document.createElement('li');
+            headerItem.className = 'team-list-header';
+            const headerDetails = document.createElement('div');
+            headerDetails.className = 'team-details';
             Object.keys(teams[0]).forEach(key => {
-                const th = document.createElement('th');
-                th.textContent = key;
-                headerRow.appendChild(th);
+                const header = document.createElement('p');
+                header.innerHTML = `<strong>${key}</strong>`;
+                headerDetails.appendChild(header);
             });
+            headerItem.appendChild(headerDetails);
+            teamList.appendChild(headerItem);
 
-            // Create table body
-            const tbody = table.createTBody();
+            // Create team items
             teams.forEach(team => {
-                const row = tbody.insertRow();
-                Object.values(team).forEach(value => {
-                    const cell = row.insertCell();
-                    cell.textContent = value || 'N/A';
+                const listItem = document.createElement('li');
+                listItem.className = 'team-list-item';
+
+                const teamDetails = document.createElement('div');
+                teamDetails.className = 'team-details';
+
+                Object.entries(team).forEach(([key, value]) => {
+                    const detail = document.createElement('p');
+                    detail.innerHTML = `<strong>${key}:</strong> ${value || 'N/A'}`;
+                    teamDetails.appendChild(detail);
                 });
+
+                listItem.appendChild(teamDetails);
+                teamList.appendChild(listItem);
             });
         })
         .catch(error => {
