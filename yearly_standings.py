@@ -1,5 +1,12 @@
 import pandas as pd
 from decimal import Decimal
+import datetime
+
+
+firstSeason = 2023
+currentSeason = 2024
+
+
 
 df_matchups = pd.read_csv('RawData/DirectMatchups.csv')
 df_teams = pd.read_csv('RawData/TeamNames.csv')

@@ -46,14 +46,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const headerItem = document.createElement('li');
         headerItem.className = 'team-list-header';
         Object.keys(teams[0]).forEach(key => {
-            const header = document.createElement('div');
-            header.innerHTML = `
-                <span class="header-text">${key}</span>
-                <span class="sort-icon">${currentSortColumn === key ? (sortDirection === 'asc' ? '&#9650;' : '&#9660;') : ''}</span>
-            `;
-            header.addEventListener('click', () => sortByColumn(key));
-            header.style.cursor = 'pointer'; // Add pointer cursor to indicate it's clickable
-            headerItem.appendChild(header);
+            if (key !== 'teamId') { // Exclude 'teamId' from the displayed headers
+                const header = document.createElement('div');
+                header.innerHTML = `
+                    <span class="header-text">${key}</span>
+                    <span class="sort-icon">${currentSortColumn === key ? (sortDirection === 'asc' ? '&#9650;' : '&#9660;') : ''}</span>
+                `;
+                header.addEventListener('click', () => sortByColumn(key));
+                header.style.cursor = 'pointer'; // Add pointer cursor to indicate it's clickable
+                headerItem.appendChild(header);
+            }
         });
         teamList.appendChild(headerItem);
 
@@ -65,8 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
             Object.keys(team).forEach((key, index) => {
                 const detail = document.createElement('div');
                 if (index === 0) { // Make the first column (name) clickable
-                    detail.innerHTML = `<a href="#" class="team-link">${team[key]}</a>`;
-                } else {
+                    // Customize the link here
+                    const teamName = team[key];
+                    const teamId = team['teamId']; // Get the teamId value
+                    const link = `team.html?name=${encodeURIComponent(teamName)}&id=${encodeURIComponent(teamId)}`; // Example: link to a team page with teamId
+                    detail.innerHTML = `<a href="${link}" class="team-link">${teamName}</a>`;
+                } else if (key !== 'teamId') { // Exclude 'teamId' from being displayed
                     detail.textContent = team[key] || 'N/A';
                 }
                 listItem.appendChild(detail);
