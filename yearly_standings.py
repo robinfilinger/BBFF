@@ -28,8 +28,8 @@ for x in range(currentSeason-firstSeason):
     for x in range(len(df_currYear_Teams)):
         teamName = df_currYear_Teams.iloc[x]['Name']
         teamId = df_currYear_Teams.iloc[x]['Id']
-        df_wins = df_matchups.loc[df_matchups['Winner'] ==teamName]
-        df_losses = df_matchups.loc[df_matchups['Loser'] == teamName]
+        df_wins = df_currYear_matchups.loc[df_currYear_matchups['Winner'] ==teamName]
+        df_losses = df_currYear_matchups.loc[df_currYear_matchups['Loser'] == teamName]
 
         wins = len(df_wins)
         losses = len(df_losses)
