@@ -1,11 +1,11 @@
-﻿Id,Year,Owner1,Owner2,Name,Active
-1,2023,Rich,,Team Filinger
-2,2023,Tom,Colotti,Better Call Hall
-3,2023,Frankel,,Dirty Terps
-4,2023,Ness,,Average Low's
-5,2023,Harris,Kovar,McCaffrican Americans
-6,2023,Joe,,Team Bucci
-7,2023,Carbone,,Michael Meyers
-8,2023,Gabe,,Olave Garden
-9,2023,Spencer,Tyler,Loading 2024…..
-10,2023,Oppizzi,Mike,BOX BROS
+﻿Id,Year,Owner1,Owner2,Name,OwnerId1, OwnerId2
+1,2023,Rich,,Team Filinger,1,0
+2,2023,Tom,Colotti,Better Call Hall,2,3
+3,2023,Frankel,,Dirty Terps,4,0
+4,2023,Ness,,Average Low's,5,0
+5,2023,Harris,Kovar,McCaffrican Americans,6,7
+6,2023,Joe,,Team Bucci,8,0
+7,2023,Carbone,,Michael Meyers,9,0
+8,2023,Gabe,,Olave Garden,10,0
+9,2023,Spencer,Tyler,Loading 2024…..,11,12
+10,2023,Oppizzi,Mike,BOX BROS,13,14
