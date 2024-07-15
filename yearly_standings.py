@@ -41,10 +41,7 @@ for x in range(currentSeason-firstSeason):
         averagePf = round(pointsFor/(wins + losses), 2)
         averagePa = round(pointsAgainst/(wins + losses), 2)
 
-
-
         df_standings.loc[len(df_standings)] = [teamId, teamName, wins, losses, pointsFor, pointsAgainst, averagePf, averagePa]
-
 
         print(df_standings)
         df_standings.to_csv('CompleteData/Historical/HistoricalStandings.csv', index=False)
