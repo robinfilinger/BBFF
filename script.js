@@ -64,18 +64,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const listItem = document.createElement('li');
             listItem.className = 'team-list-item';
 
-            Object.keys(team).forEach((key, index) => {
-                const detail = document.createElement('div');
-                if (index === 0) { // Make the first column (name) clickable
-                    // Customize the link here
+            Object.keys(team).forEach(key => {
+                if (key === 'Team') { // Make the Team column clickable
                     const teamName = team[key];
                     const teamId = team['teamId']; // Get the teamId value
                     const link = `team.html?name=${encodeURIComponent(teamName)}&id=${encodeURIComponent(teamId)}`; // Example: link to a team page with teamId
+                    const detail = document.createElement('div');
                     detail.innerHTML = `<a href="${link}" class="team-link">${teamName}</a>`;
+                    listItem.appendChild(detail);
                 } else if (key !== 'teamId') { // Exclude 'teamId' from being displayed
+                    const detail = document.createElement('div');
                     detail.textContent = team[key] || 'N/A';
+                    listItem.appendChild(detail);
                 }
-                listItem.appendChild(detail);
             });
 
             teamList.appendChild(listItem);
