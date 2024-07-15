@@ -50,15 +50,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const sortIcon = document.createElement('span');
             sortIcon.className = 'sort-icon';
 
-            header.textContent = key;
-            header.addEventListener('click', () => sortByColumn(key));
-            header.style.cursor = 'pointer'; // Add pointer cursor to indicate it's clickable
-
             if (currentSortColumn === key) {
                 sortIcon.innerHTML = sortDirection === 'asc' ? '&#9650;' : '&#9660;'; // Up or down arrow
             }
 
-            header.prepend(sortIcon);
+            header.appendChild(sortIcon);
+            header.appendChild(document.createTextNode(key));
+            header.addEventListener('click', () => sortByColumn(key));
+            header.style.cursor = 'pointer'; // Add pointer cursor to indicate it's clickable
             headerItem.appendChild(header);
         });
         teamList.appendChild(headerItem);
