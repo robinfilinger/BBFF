@@ -15,7 +15,7 @@ for x in range(currentSeason-firstSeason):
     df_standings = pd.DataFrame(columns=['teamId','Team', 'W', 'L', 'Points For', 'Points Against', 'Average PF', 'Average PA'])
 
     df_currYear_matchups = df_matchups.loc[df_matchups['Season'] == currYear]
-    df_currYear_Teams = df_teams.loc[df_matchups['Season'] == currYear]
+    df_currYear_Teams = df_teams.loc[df_teams['Season'] == currYear]
     
 
     def to_decimal(val):
