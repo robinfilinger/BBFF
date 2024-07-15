@@ -61,6 +61,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid white; /* Add border to header cells */
 }
 
 .team-list-item {
