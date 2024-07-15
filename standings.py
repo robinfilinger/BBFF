@@ -5,7 +5,7 @@ df_matchups = pd.read_csv('RawData/DirectMatchups.csv')
 df_teams = pd.read_csv('RawData/TeamNames.csv')
 
 df_Terps = len(df_matchups.loc[df_matchups['Winner'] =='Dirty Terps'])
-df_standings = pd.DataFrame(columns=['Team', 'W', 'L', 'Points For', 'Points Against', 'Average Points For', 'Average Points Against'])
+df_standings = pd.DataFrame(columns=['Team', 'W', 'L', 'Points For', 'Points Against', 'Average PF', 'Average PA'])
 team_records = []
 
 def to_decimal(val):
