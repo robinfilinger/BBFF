@@ -62,9 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const listItem = document.createElement('li');
             listItem.className = 'team-list-item';
 
-            Object.values(team).forEach(value => {
+            Object.keys(team).forEach((key, index) => {
                 const detail = document.createElement('div');
-                detail.textContent = value || 'N/A';
+                if (index === 0) { // Make the first column (name) clickable
+                    detail.innerHTML = `<a href="#" class="team-link">${team[key]}</a>`;
+                } else {
+                    detail.textContent = team[key] || 'N/A';
+                }
                 listItem.appendChild(detail);
             });
 
