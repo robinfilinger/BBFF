@@ -2,95 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playoff Bracket</title>
     <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body>
-    <header>
-        <h1>Playoff Bracket</h1>
+    <header class="hero">
+        <div class="hero-wrap">
+            <p class="intro" id="intro">Playoff</p>
+            <h1 id="headline">Bracket</h1>
+            <p class="year"><i class="fa fa-star"></i> 2024 <i class="fa fa-star"></i></p>
+        </div>
     </header>
-    <main>
-        <div class="bracket">
-            <!-- Round 1 -->
-            <div class="round">
-                <div class="round-title">Round 1</div>
-                <div class="matchup">
-                    <div class="team" id="seed3">
-                        <span>Seed 3</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                    <div class="team" id="seed6">
-                        <span>Seed 6</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                </div>
-                <div class="matchup">
-                    <div class="team" id="seed4">
-                        <span>Seed 4</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                    <div class="team" id="seed5">
-                        <span>Seed 5</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
+
+    <section id="bracket">
+        <div class="container">
+            <div class="split split-one">
+                <div class="round round-one current">
+                    <div class="round-details">Round 1<br/><span class="date">Dates TBD</span></div>
+                    <ul class="matchup">
+                        <li class="team team-top" id="seed3">Seed 3 <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom" id="seed6">Seed 6 <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top" id="seed4">Seed 4 <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom" id="seed5">Seed 5 <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul>
+                </div>  <!-- END ROUND ONE -->
+
+                <div class="round round-two">
+                    <div class="round-details">Round 2<br/><span class="date">Dates TBD</span></div>     
+                    <ul class="matchup">
+                        <li class="team team-top bye" id="seed1">Seed 1 (Bye)</li>
+                        <li class="team team-bottom" id="winner3v6">Winner of 3 vs 6 <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul> 
+                    <ul class="matchup">
+                        <li class="team team-top bye" id="seed2">Seed 2 (Bye)</li>
+                        <li class="team team-bottom" id="winner4v5">Winner of 4 vs 5 <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul>                   
+                </div>  <!-- END ROUND TWO -->
+            </div> 
+
+            <div class="champion">
+                <div class="final">
+                    <i class="fa fa-trophy"></i>
+                    <div class="round-details">Championship<br/><span class="date">Dates TBD</span></div>    
+                    <ul class="matchup championship">
+                        <li class="team team-top" id="winnerRound2A">Winner of Round 2A <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom" id="winnerRound2B">Winner of Round 2B <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Connectors for Round 1 to Round 2 -->
-            <div class="round">
-                <div class="connector"></div>
-                <div class="connector horizontal"></div>
-                <div class="connector"></div>
-                <div class="connector"></div>
-                <div class="connector horizontal"></div>
-                <div class="connector"></div>
-            </div>
+            <div class="split split-two">
+                <div class="round round-two">
+                    <div class="round-details">Round 2<br/><span class="date">Dates TBD</span></div>           
+                    <ul class="matchup">
+                        <li class="team team-top" id="winner3v6">Winner of 3 vs 6 <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom bye" id="seed1">Seed 1 (Bye)</li>
+                    </ul> 
+                    <ul class="matchup">
+                        <li class="team team-top" id="winner4v5">Winner of 4 vs 5 <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom bye" id="seed2">Seed 2 (Bye)</li>
+                    </ul>                   
+                </div>  <!-- END ROUND TWO -->
 
-            <!-- Round 2 -->
-            <div class="round">
-                <div class="round-title">Round 2</div>
-                <div class="matchup">
-                    <div class="team bye" id="seed1">Seed 1 (Bye)</div>
-                    <div class="team" id="winner3v6">
-                        <span>Winner of 3 vs 6</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                </div>
-                <div class="matchup">
-                    <div class="team bye" id="seed2">Seed 2 (Bye)</div>
-                    <div class="team" id="winner4v5">
-                        <span>Winner of 4 vs 5</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Connectors for Round 2 to Championship -->
-            <div class="round">
-                <div class="connector"></div>
-                <div class="connector horizontal"></div>
-                <div class="connector"></div>
-                <div class="connector"></div>
-                <div class="connector horizontal"></div>
-                <div class="connector"></div>
-            </div>
-
-            <!-- Championship Round -->
-            <div class="round">
-                <div class="round-title">Championship</div>
-                <div class="matchup">
-                    <div class="team" id="winnerRound2A">
-                        <span>Winner of Round 2A</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                    <div class="team" id="winnerRound2B">
-                        <span>Winner of Round 2B</span>
-                        <input type="text" class="score" placeholder="Score">
-                    </div>
-                </div>
+                <div class="round round-one current">
+                    <div class="round-details">Round 1<br/><span class="date">Dates TBD</span></div>
+                    <ul class="matchup">
+                        <li class="team team-top" id="seed4">Seed 4 <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom" id="seed5">Seed 5 <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul>
+                    <ul class="matchup">
+                        <li class="team team-top" id="seed3">Seed 3 <span class="score"><input type="text" placeholder="Score"></span></li>
+                        <li class="team team-bottom" id="seed6">Seed 6 <span class="score"><input type="text" placeholder="Score"></span></li>
+                    </ul>                   
+                </div>  <!-- END ROUND ONE -->                  
             </div>
         </div>
-    </main>
+    </section>
+
+    <section class="share">
+        <div class="share-wrap">
+            <a class="share-icon" href="#"><i class="fa fa-twitter"></i></a>
+            <a class="share-icon" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="share-icon" href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </section>
 </body>
 </html>
