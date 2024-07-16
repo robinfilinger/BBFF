@@ -159,6 +159,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .matchup {
@@ -201,4 +202,19 @@ main {
     display: block;
     color: #777;
     font-size: 0.9rem;
+}
+
+/* Center the matchups in later rounds */
+.round-2 .matchup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.round-3 .matchup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
