@@ -106,10 +106,14 @@ main {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    border: 1px solid white; /* Add border to header cells */
+    border-right: 1px solid white; /* Add right border to header cells */
     height: 100%; /* Make the div fill the height of the header */
     padding: 0 10px; /* Adjust padding for better spacing */
     box-sizing: border-box;
+}
+
+.team-list-header div:last-child {
+    border-right: none; /* Remove right border for the last header cell */
 }
 
 .team-list-item {
