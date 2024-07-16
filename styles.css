@@ -142,50 +142,42 @@ main {
 .bracket {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding-top: 20px;
-    background-color: #e1e1e1;
-    background-color: rgba(225, 225, 225, 0.9);
-    font-size: 12px;
-    padding: 40px 0;
 }
 
 .round {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-    margin-bottom: 2rem;
+    margin: 20px;
 }
 
-.round-one .round {
-    margin: 0 2.5% 0 0;
-}
-
-.round-two .round {
-    margin: 0 0 0 2.5%;
+.round-title {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .matchup {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .team {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 200px;
-    padding: 0.5rem;
-    background-color: white;
-    border: 2px solid #1a5f7a;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #1a5f7a;
     border-radius: 5px;
-    margin: 0.5rem 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
@@ -193,45 +185,20 @@ main {
     background-color: #e0e0e0;
 }
 
-.team.bye {
+.bye {
     background-color: #d4d4d4;
     color: #999;
     cursor: default;
 }
 
-.score {
-    font-size: 11px;
-    text-transform: uppercase;
-    float: right;
-    color: #2C7399;
-    font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
-    position: absolute;
-    right: 5px;
+.connector {
+    width: 2px;
+    height: 50px;
+    background-color: #1a5f7a;
+    position: relative;
 }
 
-.round-details {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 13px;
-    color: #2C7399;
-    text-transform: uppercase;
-    text-align: center;
-    height: 40px;
-}
-
-.champion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 16%;
-    align-self: center;
-    margin-top: -15px;
-    text-align: center;
-    padding: 230px 0;
-}
-
-.champion i {
-    color: #a0a6a8;
-    font-size: 45px;
-    padding: 10px 0;
+.connector.horizontal {
+    width: 50px;
+    height: 2px;
 }
