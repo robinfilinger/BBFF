@@ -11,6 +11,10 @@ header {
     padding: 1rem;
 }
 
+header h1 {
+    margin: 0;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -141,4 +145,61 @@ main {
 
 .team-link:hover {
     text-decoration: underline;
+}
+
+.bracket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+.round {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.matchup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    width: 200px;
+}
+
+.matchup .team {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.matchup .team .name {
+    font-weight: bold;
+}
+
+.matchup .team .score {
+    font-size: 1.2rem;
+    color: #1a5f7a;
+}
+
+.round-label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a5f7a;
+}
+
+.round-label span {
+    display: block;
+    color: #777;
+    font-size: 0.9rem;
 }
