@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playoff Bracket</title>
-    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
@@ -16,12 +16,24 @@
             <div class="round">
                 <div class="round-title">Round 1</div>
                 <div class="matchup">
-                    <div class="team" id="seed3">Seed 3</div>
-                    <div class="team" id="seed6">Seed 6</div>
+                    <div class="team" id="seed3">
+                        <span>Seed 3</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
+                    <div class="team" id="seed6">
+                        <span>Seed 6</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
                 </div>
                 <div class="matchup">
-                    <div class="team" id="seed4">Seed 4</div>
-                    <div class="team" id="seed5">Seed 5</div>
+                    <div class="team" id="seed4">
+                        <span>Seed 4</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
+                    <div class="team" id="seed5">
+                        <span>Seed 5</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
                 </div>
             </div>
 
@@ -40,11 +52,17 @@
                 <div class="round-title">Round 2</div>
                 <div class="matchup">
                     <div class="team bye" id="seed1">Seed 1 (Bye)</div>
-                    <div class="team" id="winner3v6">Winner of 3 vs 6</div>
+                    <div class="team" id="winner3v6">
+                        <span>Winner of 3 vs 6</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
                 </div>
                 <div class="matchup">
                     <div class="team bye" id="seed2">Seed 2 (Bye)</div>
-                    <div class="team" id="winner4v5">Winner of 4 vs 5</div>
+                    <div class="team" id="winner4v5">
+                        <span>Winner of 4 vs 5</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
                 </div>
             </div>
 
@@ -62,8 +80,14 @@
             <div class="round">
                 <div class="round-title">Championship</div>
                 <div class="matchup">
-                    <div class="team" id="winnerRound2A">Winner of Round 2A</div>
-                    <div class="team" id="winnerRound2B">Winner of Round 2B</div>
+                    <div class="team" id="winnerRound2A">
+                        <span>Winner of Round 2A</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
+                    <div class="team" id="winnerRound2B">
+                        <span>Winner of Round 2B</span>
+                        <input type="text" class="score" placeholder="Score">
+                    </div>
                 </div>
             </div>
         </div>
