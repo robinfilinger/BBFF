@@ -11,6 +11,10 @@ header {
     padding: 1rem;
 }
 
+header h1 {
+    margin: 0;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -94,11 +98,7 @@ main {
     color: white;
     font-weight: bold;
     box-sizing: border-box;
-    padding: 0; /* Remove padding to ensure full-width */
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
-    gap: 0; /* No gap between header cells */
-    height: 50px; /* Set a fixed height for the header */
+    height: 50px;
 }
 
 .team-list-header div {
@@ -106,9 +106,9 @@ main {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    border: 1px solid white; /* Add border to header cells */
-    height: 100%; /* Make the div fill the height of the header */
-    padding: 0 10px; /* Adjust padding for better spacing */
+    border: 1px solid white;
+    height: 100%;
+    padding: 0 10px;
     box-sizing: border-box;
 }
 
@@ -137,4 +137,35 @@ main {
 
 .team-link:hover {
     text-decoration: underline;
+}
+
+.bracket {
+    padding: 20px;
+}
+
+.round {
+    margin-bottom: 20px;
+}
+
+.matchup {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.score {
+    font-size: 1.2rem;
 }
