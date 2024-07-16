@@ -143,7 +143,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
     padding-top: 20px;
@@ -157,23 +156,15 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-    margin-bottom: 2rem;
-}
-
-.round-one .round {
-    margin: 0 2.5% 0 0;
-}
-
-.round-two .round {
-    margin: 0 0 0 2.5%;
+    width: 200px;
+    margin: 0 10px;
 }
 
 .matchup {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .team {
@@ -187,16 +178,11 @@ main {
     border-radius: 5px;
     margin: 0.5rem 0;
     transition: background-color 0.3s;
+    position: relative;
 }
 
 .team:hover {
     background-color: #e0e0e0;
-}
-
-.team.bye {
-    background-color: #d4d4d4;
-    color: #999;
-    cursor: default;
 }
 
 .score {
