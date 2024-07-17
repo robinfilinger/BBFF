@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         headerItem.className = 'team-list-header';
         Object.keys(teams[0]).forEach(key => {
             if (key !== 'teamId') { // Exclude 'teamId' from the displayed headers
+                console.log(key)
                 const header = document.createElement('div');
                 header.innerHTML = `
                     <span class="header-text">${key}</span>
